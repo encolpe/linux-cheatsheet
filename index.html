@@ -8,17 +8,6 @@
   <link rel="stylesheet" href="css/style.css" type="text/css">
   <script type="text/javascript" src="scripts/jquery-1.7.2.min.js"></script>
   <script type="text/javascript" src="scripts/scroll.js"></script>
-  <script type="text/javascript">
-    var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-1726438-5']);
-        _gaq.push(['_trackPageview']);
-
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s  = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-  </script>
 </head>
 <body>
 
@@ -26,6 +15,7 @@
     <h1>Linux - commandes fondamentales</h1>
     <h3>Un petit guide pour bien démarrer avec Linux.</h3>
     <ul class="navlist">
+      <li><a href="#pwd">pwd</a></li>
       <li><a href="#ls">ls</a></li>
       <li><a href="#cd">cd</a></li>
       <li><a href="#cp">cp</a></li>
@@ -54,17 +44,23 @@
       <li><a href="#diskspace">Espace disque</a></li>
     </ul>
 
-    <a href="https://twitter.com/share" class="twitter-share-button" data-text="Linux - Cheatsheet des commandes fondamentales" data-via="juliendubreuil" data-size="large" data-related="juliendubreuil">Tweet</a>
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-    <p class="meta">
+     <p class="meta">
       Par <a href="http://www.twitter.com/juliendubreuil">Julien Dubreuil</a><br />
-      Inspiré du guide de <a href="http://rogerdudler.github.com/git-guide/index.html">Roger Dudler</a> sur Git.
+      Inspiré du guide de <a href="http://rogerdudler.github.com/git-guide/index.html">Roger Dudler</a> sur Git.<br/>
+      Complété par Encolpe.
      <img alt="" src="img/arrow.png">
     </p>
   </div>
 
   <div id="toTheTop" style="display: block;">
     <span>Top of page</span>
+  </div>
+
+  <div id="pwd" class="block block-pwd yellow">
+    <a name="pwd"></a>
+    <h2>pwd</h2>
+    <h4>La commande <strong><i>pwd</i></strong> Affiche le nom complet du répertoire de travail actuel.</h4>
+    <p><code>pwd</code> Afficher le nom complet du répertoire de travail actuel.<p>
   </div>
 
   <div id="ls" class="block block-ls brown">
@@ -333,7 +329,6 @@
     <p><code>kill ­9 pid</code> Tuer violemment le processus (déconseillé).</p>
   </div>
 
-<!--
   <div id="file" class="block block-file">
     <a name="file"></a>
     <h2>Afficher un fichier</h2>
@@ -374,25 +369,6 @@
     <h4>Quelques exemples de combinaisons de commandes ou de commandes complexes.</h4>
     <p><code>:w !sudo tee% > /dev/null</code></p>
   </div>
--->
 
-  <div id="comment" class="block block-comment">
-    <a name="comment"></a>
-    <h2>Commentaires</h2>
-    <div id="disqus_thread"></div>
-    <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'linux-cheatsheet'; // required: replace example with your forum shortname
-
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-  </div>
 </body>
 </html>
