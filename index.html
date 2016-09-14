@@ -344,6 +344,7 @@
   <div id="sort" class="block block-sort">
     <a name="sort"></a>
     <h2>sort</h2>
+    <h4>Permet de trier un fichier ou un flux</h4>
   </div>
 
   <div id="awk" class="block block-awk">
@@ -355,12 +356,14 @@
   <div id="pipe" class="block block-pipe">
     <a name="pipe"></a>
     <h2>Pipes and Redirection</h2>
+    <pre>
     You pipe a command to another command, and redirect it to a file.)
   {command} > {file}  Redirect output to a file, eg ls > list.txt writes directory to file.
   {command} >> {file} Append output to an existing file, eg cat update >> archive adds update to end of archive.
   {command} < {file}  Get input from a file, eg sort < file.txt
   {command} < {file1} > {file2} Get input from file1, and write to file2, eg sort < old.txt > new.txt sorts old.txt and saves as new.txt.
   {command} | {command} Pipe one command to another, eg ls | more gets directory and sends it to more to show it one page at a time.
+  </pre>
   </div>
 
   <div id="various-command" class="block block-various-command">
