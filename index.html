@@ -42,6 +42,10 @@
       <li><a href="#process">Processus</a></li>
       <li><a href="#archives">Archives</a></li>
       <li><a href="#diskspace">Espace disque</a></li>
+      <li><a href="#file">Manipulation de fichier</a></li>
+      <li><a href="#awk">Awk</a></li>
+      <li><a href="#sort">sort</a></li>
+      <li><a href="#pipe">Redirection et enchainement</a></li>
     </ul>
 
      <p class="meta">
@@ -345,6 +349,11 @@
     <a name="sort"></a>
     <h2>sort</h2>
     <h4>Permet de trier un fichier ou un flux</h4>
+    <p><code>sort -f</code> Convertir les caractères minuscules en majuscules.</p>
+    <p><code>sort -g</code> Comparer selon la valeur numérique des caractères.</p>
+    <p><code>sort -R</code> Trier de façon aléatoire.</p>
+    <p><code>sort -r</code> Inverser le résultat des comparaisons.</p>
+    <p><code>sort -u</code> Avec -c, vérifier que le classement est strict ; sans -c, n'afficher que la première entrée identique rencontrée.</p>
   </div>
 
   <div id="awk" class="block block-awk">
@@ -355,14 +364,13 @@
 
   <div id="pipe" class="block block-pipe">
     <a name="pipe"></a>
-    <h2>Pipes and Redirection</h2>
-    <pre>
-    You pipe a command to another command, and redirect it to a file.)
-  {command} > {file}  Redirect output to a file, eg ls > list.txt writes directory to file.
-  {command} >> {file} Append output to an existing file, eg cat update >> archive adds update to end of archive.
-  {command} < {file}  Get input from a file, eg sort < file.txt
-  {command} < {file1} > {file2} Get input from file1, and write to file2, eg sort < old.txt > new.txt sorts old.txt and saves as new.txt.
-  {command} | {command} Pipe one command to another, eg ls | more gets directory and sends it to more to show it one page at a time.
+    <h2>Pipes et Redirection</h2>
+    <h4>Il est possible de rediriger les flux entrant et sortant d'une commande pour les stocker et les réutiliser. </h4>
+    <p><code>{commande} > {fichier}</code>  Redirige la sortie dans un fichier, ie ls > list.txt écrit la liste du dossier dans le fichier. Écrase le fichier s'il existe</p>
+    <p><code>{commande} >> {fichier}</code> Rajoute la sortie dans un fichier existant, ie cat update >> archive rajoute de nouvelles lignes à la fin du fichier archive.</p>
+    <p><code>{commande} < {fichier}</code>  Récuoère l'entrée depuis un fichier, ie sort < file.txt</p>
+    <p><code>{commande} < {fichier1} > {fichier2}</code> Récupère l'entrée depuis fichier1, et écrit la sortie dans fichier2, ie sort < old.txt > new.txt va trier le contenu de old.txt dans new.txt.</p>
+    <p><code>{commande} | {commande}</code> ebchaîne une commande dans la suivante, ie ls | more récupère la liste du dossier et l'affiche page par page.</p>
   </pre>
   </div>
 
